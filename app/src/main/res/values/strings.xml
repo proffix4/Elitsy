@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Елицы</string>
+    <string name="search_hint">Поиск</string>
+    <string name="home_page">https://elitsy.ru</string>
+    <string name="podelitsa">Поделиться</string>
+    <string name="iz">из</string>
+    <string name="my_menu">МЕНЮ</string>
+    <string name="sohranit_izobr">Сохранить изображение</string>
+    <string name="sys_menu">Вызвать системное меню</string>
+    <string name="izobr_sohraneno">Изображение успешно сохранено</string>
+    <string name="oshibka_sohr">Ошибка при сохранении изображения…</string>
+    <string name="ne_naideno">Не найдено !</string>
+    <string name="zagruzka_dan">ЗАГРУЗКА ЕЛИЦЫ</string>
+    <string name="net_dostupa_k_internet">Нет связи с сервером!  Проверьте выход в Интернет и нажмите значок Домой</string>
+</resources>

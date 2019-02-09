@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/progressBar">
+    </WebView>
+
+    <TextView
+        android:id="@+id/loadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/gray"
+        android:text="@string/zagruzka_dan"
+        android:gravity="center"
+        android:drawableRight="@drawable/ic_action_loading"
+        android:drawablePadding="5dp"
+        android:layout_centerVertical="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/mainToolLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/ic_action_back"
+            android:layout_alignParentLeft="true" />
+
+        <ImageButton
+            android:id="@+id/forwardButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/backButton"
+            app:srcCompat="@drawable/ic_action_forward"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/backButton" />
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/forwardButton"
+            app:srcCompat="@drawable/ic_action_refresh"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/forwardButton" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="false"
+            android:layout_toEndOf="@id/refreshButton"
+            app:srcCompat="@drawable/ic_action_home"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentLeft="false"
+            android:layout_toRightOf="@id/refreshButton" />
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/homeButton"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/ic_action_search"
+            android:layout_toRightOf="@id/homeButton" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_action_share"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/urlText"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/homeButton"
+            android:layout_toStartOf="@+id/loadButton"
+            android:inputType="text"
+            android:paddingTop="10sp"
+            android:text="@string/home_page"
+            android:textColor="@color/textColor"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/homeButton"
+            android:layout_toLeftOf="@+id/loadButton" />
+
+        <ImageButton
+            android:id="@+id/loadButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_action_send"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/textColor"
+        android:layout_above="@id/mainToolLayout"/>
+
+    <RelativeLayout
+        android:id="@+id/searchToolLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10sp"
+            android:textColor="@color/textColor"
+            android:layout_alignParentLeft="true" />
+
+        <ImageButton
+            android:id="@+id/searchBackButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/searchText"
+            app:srcCompat="@drawable/ic_action_prev"
+            android:layout_toRightOf="@+id/searchText" />
+
+        <ImageButton
+            android:id="@+id/forwardSearchButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/searchBackButton"
+            app:srcCompat="@drawable/ic_action_next"
+            android:layout_toRightOf="@id/searchBackButton" />
+
+        <TextView
+            android:id="@+id/searchCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/forwardSearchButton"
+            android:layout_toStartOf="@+id/searchCloseButton"
+            android:paddingTop="10sp"
+            android:textColor="@color/textColor"
+            android:layout_toRightOf="@id/forwardSearchButton"
+            android:layout_toLeftOf="@+id/searchCloseButton" />
+
+        <ImageButton
+            android:id="@+id/searchCloseButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/ic_action_close"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
